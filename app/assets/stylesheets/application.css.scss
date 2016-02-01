@@ -17,7 +17,7 @@
 @import "bootstrap";
 
 body {
-	background: #AA4847;
+	background: #F8B123;
 }
 .review_title {
 	margin: 0 0 20px  0;
@@ -29,3 +29,10 @@ body {
 		padding-bottom: 8px;
 	}
 }
+.minicon {
+	height:60px; width:auto;
+	padding:5px;
+	top:10px;
+	position:relative;
+}
+.cb { clear:both;}

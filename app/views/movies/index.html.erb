@@ -1,23 +1,34 @@
-<% if !user_signed_in? %>
-	<div class="jumbotron">	
-      <h1>favoritos</h1>
-      <p>dfhj d jhdf hj jh jsf</p>
-      <p><%= link_to "Sign up to write review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
-    </div>
-<% else %> 
-    <div class="">     
-       <h1 class="label label-warning">Usuario registrado</h1>
-    </div>
-<% end %> 
+<%= image_tag ( "driver_list.png" ), class: "minicon pull-left" %>
+<h2 class="pull-left">Conductores (catálogo)</h2>
+<br class="cb">
+<div class="">
 
-  <div class="row">
+
+			<% if !user_signed_in? %>
+				<div class="jumbotron">	
+				  <h1>favoritos</h1>
+				  <p>dfhj d jhdf hj jh jsf</p>
+				  <p><%= link_to "Sign up to write review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+				</div>
+			<% else %> 
+				<div class="">     
+				   <h1 class="label label-default pull-right"">Usuario registrado</h1><br style="clear:both;">
+				</div>
+			<% end %> 
+
+			  <div class="row">
   
-	<% @movies.each do |movie| %>
-	  <div class="col-sm-6 col-md-3">
-        <div class="thumbnail">
-	     <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-	    </div>
-	  </div>
-	<% end %>	  
+				<% @movies.each do |movie| %>
+				  <div class="col-sm-6 col-md-3">
+					<div class="thumbnail">
+					 <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+					</div>
+				  </div>
+				<% end %>	  
   
-  </div>  
+			  </div>  
+
+
+	  
+</div>
+		  

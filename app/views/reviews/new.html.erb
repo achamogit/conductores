@@ -1,5 +1,11 @@
-<h1>New Review</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= image_tag ( "driver_rating.png" ), class: "minicon pull-left" %>
+	<h1 class="pull-left">Evaluación</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', movie_path(@movie) %>
+	<%= link_to 'Back', movie_path(@movie), class: "btn btn-warning" %>
+
+  </div>
+</div>

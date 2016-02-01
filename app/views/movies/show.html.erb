@@ -1,3 +1,6 @@
+<%= image_tag ( "driver.png" ), class: "minicon pull-left" %>
+<h2 class="pull-left">Conductores (revisión)</h2>
+<br class="cb">
 <div class="panel panel-default">
 	<div class="panel-body">
 	   <div class="row">
@@ -35,7 +38,8 @@
 	        	      
 	        	   </tbody>
 	        	</table>
-	        	<%= link_to "write a Review", new_movie_review_path(@movie), class: "btn btn-warning" %>
+	        	<%= image_tag ( "driver_rating.png" ), class: "minicon pull-left" %>
+	        	<%= link_to "Evaluación", new_movie_review_path(@movie), class: "btn btn-warning pull-left" %>
 	        </div>
 	     </div>
 	     
@@ -68,8 +72,9 @@
 
 
 
-<%= image_tag ("cancel-on.png" ) %>
+
 <!--
+<%= image_tag ("cancel-on.png" ) %>
 path_to_image("flavor_preview.jpg")
 
 -->
