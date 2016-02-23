@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @perfile.name %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @perfile.nivel %>
+</p>
+
+<%= link_to 'Edit', edit_perfile_path(@perfile) %> |
+<%= link_to 'Back', perfiles_path %>

@@ -1,0 +1,90 @@
+<%= image_tag ( "driver.png" ), class: "minicon pull-left" %>
+<h2 class="pull-left">Conductores (revisión)</h2>
+<br class="cb">
+<div class="panel panel-default">
+	<div class="panel-body">
+	   <div class="row">
+	     <div class="col-md-4">
+	        <%= image_tag @movie.image.url() %>
+	        <div class="star-rating" data-score= <%= @avg_review %> ></div>
+	        <em><%= "#{@reviews.length} reviews" %></em>
+	        <div class="table-responsive">
+	        	<table class="table">
+	        	   <tbody>
+	        	      <tr>
+	        	      	<td><strong>Title:</strong></td>
+	        	      	<td><%= @movie.title %></td>
+	        	      </tr>
+
+	        	      <tr>
+	        	      	<td><strong>Description:</strong></td>
+	        	        <td><%= @movie.description %></td>
+	        	      </tr>
+
+	        	      <tr>
+	        	      	<td><strong>Experiencia:</strong></td>
+	        	      	<td><%= @movie.movie_length %></td>
+	        	      </tr>
+
+	        	      <tr>
+	        	      	<td><strong>Director:</strong></td>
+	        	      	<td><%= @movie.director %></td>
+	        	      </tr>
+
+	        	      <tr>
+	        	      	<td><strong>Rating:</strong></td>
+	        	      	<td><%= @movie.rating %></td>
+	        	      </tr>	        	      
+	        	      
+	        	   </tbody>
+	        	</table>
+	        	<%= image_tag ( "driver_rating.png" ), class: "minicon pull-left" %>
+	        	<%= link_to "Evaluación", new_movie_review_path(@movie), class: "btn btn-warning pull-left" %>
+	        </div>
+	     </div>
+	     
+	     <div class="col-md-7 col-md-offset-1">
+	     	<h1 class="review_title"><%= @movie.title %></h1>
+	     	<p><%= @movie.description %></p>
+	     	<% if @reviews.blank? %>
+	     		<h3>no reviews just yet, woluld you ike to add the first!</h3>
+	     		<%= link_to "write review", new_movie_review_path(@movie), class: "btn btn-default" %>
+	     	<% else %>
+	     		<% @reviews.each do |review| %>
+	     			<div class="reviews">
+	     			    <div class="star-rating" data-score= <%= review.rating %> ></div>  
+	     				
+	     				<%= review.comment %>
+	     			</div>
+	     		<% end %>	
+	     	<% end %>
+	     </div>
+	     
+	     
+	   </div>
+	</div>
+</div>
+
+
+
+<%= link_to 'Edit', edit_movie_path(@movie), class: "btn btn-danger" %> |
+<%= link_to 'Back', movies_path, class: "btn btn-default"  %>
+
+
+
+
+<!--
+<%= image_tag ("cancel-on.png" ) %>
+path_to_image("flavor_preview.jpg")
+
+-->
+
+<script>
+$('.star-rating').raty({
+  path: '/assets/',
+  readOnly: true,
+  score: function() {
+    return $(this).attr('data-score');
+  }
+});
+</script>

@@ -1,0 +1,68 @@
+<h1>Modulos</h1>
+<p>Funcionalidades</p>
+
+
+
+<%= link_to image_tag("admin.svg", :border => 0, :title => "Administrador"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>
+<br>
+    
+<%= link_to image_tag("bd.svg", :border => 0, :title => "Base de datos"), 
+     {}, {:class => 'sensor adm'} %>
+    
+<%= link_to image_tag("perfiles.svg", :border => 0, :title => "Perfiles"), 
+    {:action => 'index', :controller => 'perfiles'}, {:class => 'sensor'} %>
+    
+<%= link_to image_tag("modulos.svg", :border => 0, :title => "Modulos"), 
+    {:action => 'index', :controller => 'modulos'}, {:class => 'sensor'} %>
+    
+<%= link_to image_tag("user.svg", :border => 0, :title => "Usuarios"), 
+    {}, {:class => 'sensor usr'} %>    
+<hr>
+
+<%= link_to image_tag("modulos.svg", :border => 0, :title => "Modulos"), 
+    {:action => 'index', :controller => 'modulos'}, {:class => 'sensor'} %>
+<br>
+    
+<%= link_to image_tag("vehiculos.svg", :border => 0, :title => "Vehiculos"), 
+    {:action => 'index', :controller => 'vehiculos'}, {:class => 'sensor'} %>
+    
+<%= link_to image_tag("rating.svg", :border => 0, :title => "Evaluación"), 
+    {}, {:class => 'sensor star'} %>
+    
+<%= link_to image_tag("loc-a-b.svg", :border => 0, :title => "Clientes"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>     
+    
+    
+<%= link_to image_tag("client.svg", :border => 0, :title => "Clientes"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %> 
+    
+<%= link_to image_tag("servicios.svg", :border => 0, :title => "Servicios"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>    
+    
+<%= link_to image_tag("invoice.svg", :border => 0, :title => "Facturación"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>     
+
+<%= link_to image_tag("operadora.svg", :border => 0, :title => "Operadores"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>   
+
+<%= link_to image_tag("agenda.svg", :border => 0, :title => "Favoritas"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>       
+
+<%= link_to image_tag("localidad.svg", :border => 0, :title => "Localidades"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>       
+
+<%= link_to image_tag("driver.svg", :border => 0, :title => "Conductores"), 
+    {:action => 'menu3', :controller => 'alternativas'}, {:class => 'sensor'} %>       
+    
+<script>
+  $('.adm').click(function(){
+      window.location = '/admin';
+  });
+  $('.usr').click(function(){
+      window.location = '/users/sign_in';
+  });  
+  $('.star').click(function(){
+      window.location = '/';
+  });    
+</script>

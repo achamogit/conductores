@@ -1,0 +1,37 @@
+<%= image_tag ( "driver_list.png" ), class: "minicon pull-left" %>
+<h2 class="pull-left">Conductores (catálogo)</h2>
+<br class="cb">
+<style>
+.hcat{width:200px;height:auto;}
+</style>
+<div class="">
+
+
+			<% if !user_signed_in? %>
+				<div class="jumbotron">	
+				  <h3>Calificación de conductores</h3>
+				  <p>solo usuarios registrados</p>
+				  <p><%= link_to "registrese", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+				</div>
+			<% else %> 
+				<div class="">     
+				   <h1 class="label label-default pull-right"">Usuario registrado</h1><br style="clear:both;">
+				</div>
+			<% end %> 
+
+			  <div class="row">
+  
+				<% @movies.each do |movie| %>
+				  <div class="col-sm-6 col-md-3">
+					<div class="thumbnail hcat">
+					 <%= link_to (image_tag movie.image.url(:medium), class: ' hcat'), movie %>
+					</div>
+				  </div>
+				<% end %>	  
+  
+			  </div>  
+
+
+	  
+</div>
+		  
